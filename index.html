@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Range Slider with Rotating Values | HTML, CSS, Javascript</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="range" min="0" max="6" value="0" id="slider" />
+      <div class="values">
+        <div class="wrapper" id="wrapper">
+          <span>0</span>
+          <span>100</span>
+          <span>200</span>
+          <span>300</span>
+          <span>400</span>
+          <span>500</span>
+          <span>600</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var slider = document.getElementById("slider");
+      var values = document.getElementById("wrapper");
+      slider.oninput = function () {
+        values.style.bottom = slider.value * 40 + "px";
+      };
+    </script>
+  </body>
+</html>
